@@ -57,7 +57,6 @@ The optimized production bundle will be generated in `dist/`.
 ## 📞 Connect & Contact
 
 - **Instagram**: [@qavenzo](https://instagram.com/qavenzo)
-- **WhatsApp / Phone**: [+91 90729 51662](https://wa.me/919072951662)
 - **Email**: [hello@qavenzo.com](mailto:hello@qavenzo.com)
 - **Location**: Bengaluru, Karnataka, India • Operating Globally
 
