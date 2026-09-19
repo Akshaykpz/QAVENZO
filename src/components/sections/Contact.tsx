@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, MessageSquare, CheckCircle2, Copy, Check, Phone } from 'lucide-react';
+import { Send, Mail, MessageSquare, CheckCircle2, Copy, Check, Phone, ChevronDown } from 'lucide-react';
 import { InstagramIcon } from '../ui/Icons';
 import confetti from 'canvas-confetti';
 
@@ -246,17 +246,22 @@ export const Contact: React.FC = () => {
                   <label className="block text-[10px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                     Project Type
                   </label>
-                  <select
-                    value={formData.projectType}
-                    onChange={e => setFormData({ ...formData, projectType: e.target.value })}
-                    className="w-full px-3 py-2.5 bg-[#0A0A0D] border border-white/15 text-white focus:outline-none focus:border-[#E5B800] text-xs sm:text-sm font-sans min-h-[40px]"
-                  >
-                    {projectTypes.map((item) => (
-                      <option key={item} value={item} className="bg-[#0A0A0D] text-white">
-                        {item}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="relative">
+                    <select
+                      value={formData.projectType}
+                      onChange={e => setFormData({ ...formData, projectType: e.target.value })}
+                      className="w-full pl-3.5 pr-10 py-2.5 bg-[#0A0A0D] border border-white/15 text-white focus:outline-none focus:border-[#E5B800] text-xs sm:text-sm font-sans min-h-[40px] appearance-none cursor-pointer"
+                    >
+                      {projectTypes.map((item) => (
+                        <option key={item} value={item} className="bg-[#0A0A0D] text-white">
+                          {item}
+                        </option>
+                      ))}
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3.5 text-neutral-400">
+                      <ChevronDown className="w-4 h-4 text-neutral-400" />
+                    </div>
+                  </div>
                 </div>
 
                 {/* 4. MESSAGE */}
